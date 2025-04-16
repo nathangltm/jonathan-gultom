@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonathan Martua Gultom - Biodata</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-dNmIQd1PiKfMp5R8YO0vE9f9Me9bbXxH+w1oDhKRXyWhF1M8gxCT3US2K7kBrfL+ZCG3ZZ49ZfIkkNwc+/gPGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        --primary-color: #00bcd4;
+        --secondary-color: #ffffff;
+        --text-color: #333;
+        --bg-color: #f5f7fa;
+        --highlight-color: #007acc;
+        --dark-bg: #121212;
+        --dark-text: #f1f1f1;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background 0.3s, color 0.3s;
+      }
+
+      body.dark-mode {
+        background-color: var(--dark-bg);
+        color: var(--dark-text);
+      }
+
+      nav {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      section {
+        padding: 100px 20px;
+        text-align: center;
+      }
+
+      #home {
+        background: linear-gradient(135deg, #00bcd4, #007acc);
+        color: white;
+      }
+
+      #home h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      #home p {
+        font-size: 1.25rem;
+      }
+
+      #home button {
+        margin-top: 1rem;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 25px;
+        background: white;
+        color: #007acc;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: var(--primary-color);
+      }
+
+      .content {
+        max-width: 900px;
+        margin: auto;
+        font-size: 1.1rem;
+      }
+
+      .profile-photo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border: 4px solid white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .download-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007acc;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .toggle-dark {
+        cursor: pointer;
+        padding: 5px 15px;
+        border-radius: 20px;
+        border: none;
+        background: white;
+        font-weight: bold;
+        margin-left: 20px;
+      }
+
+      footer {
+        background-color: var(--primary-color);
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .social-icons a {
+        margin: 0 10px;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        #home h1 {
+          font-size: 2.2rem;
+        }
+
+        #home p {
+          font-size: 1rem;
+        }
+
+        .profile-photo {
+          width: 150px;
+          height: 150px;
+        }
+
+        .social-icons i {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info shadow-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Jonathan Martua Gultom</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#contact">Contact</a>
+            <button class="toggle-dark" onclick="toggleDarkMode()">🌙</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" data-aos="fade-up">
+      <h1>Hai! Halo!</h1>
+      <p>Selamat datang di website pribadi saya.</p>
+      <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Lihat Profil</button>
+    </section>
+
+    <!-- About -->
+    <section id="about" data-aos="fade-right">
+      <h2>About Me</h2>
+      <img src="fotoku.jpg" alt="Foto Jonathan" class="profile-photo" />
+      <div class="content">
+        <p>Halo! Saya <strong>Jonathan Martua Gultom</strong>, mahasiswa <em>Ilmu Komputer</em> di <em>Universitas Negeri Medan</em> (UNIMED) angkatan 2022. Saya memiliki minat dalam pengembangan aplikasi mobile dan web modern.</p>
+        <a href="CV_Jonathan.pdf" class="download-btn" download>📄 Download CV</a>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" data-aos="fade-left">
+      <h2>Skills</h2>
+      <div class="content">
+        <ul>
+          <li>📱 Android Studio (Java & Kotlin)</li>
+          <li>🧑‍💻 Flutter</li>
+          <li>🌐 HTML, CSS, JavaScript</li>
+          <li>☁️ Firebase & Supabase</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" data-aos="zoom-in">
+      <h2>Contact</h2>
+      <div class="content">
+        <p>Email: jojogultom1008@gmail.com</p>
+        <p>Telepon: 0877-7118-1108</p>
+        <div class="social-icons mt-4">
+          <a href="https://instagram.com/jonathangultom" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram fa-2x" style="color: #e1306c"></i>
+          </a>
+          <a href="https://wa.me/6287771181108" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp fa-2x" style="color: #25d366"></i>
+          </a>
+          <a href="https://tiktok.com/@jonathangultom" target="_blank" aria-label="TikTok">
+            <i class="fab fa-tiktok fa-2x" style="color: #000"></i>
+          </a>
+          <a href="https://linkedin.com/in/jonathangultom" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin fa-2x" style="color: #0077b5"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>&copy; 2025 Jonathan Martua Gultom. All rights reserved.</footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+</html>
